@@ -51,13 +51,13 @@ sudo apt install ffmpeg pulseaudio-utils pulseaudio
 To install with Bun:
 
 ```bash
-bun add audio-to-text
+bun add audio-to-text-node
 ```
 
 Or with npm:
 
 ```bash
-npm install audio-to-text
+npm install audio-to-text-node
 ```
 
 ---
@@ -71,7 +71,7 @@ The package creates temporary folders in `/tmp/audio-to-text` and cleans them up
 ## ✨ Usage
 
 ```typescript
-import { transcribeFromFile } from "audio-to-text";
+import { transcribeFromFile } from "audio-to-text-node";
 
 async function main() {
   const transcript = await transcribeFromFile("/path/to/audio.wav", {
