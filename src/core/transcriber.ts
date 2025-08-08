@@ -10,10 +10,23 @@ import { removeAudioDirectory, splitAudioToChunks } from './audio';
  * @returns A Promise that resolves to the transcribed text
  */
 export async function transcribeFromFile(
+    /**
+     * Audio file formats supported: https://ffmpeg.org/general.html#File-Formats
+     */
     filePath: string,
     options?: {
+        /**
+         * Language code for transcription (default: 'en-US').
+         * See supported languages: https://cloud.google.com/speech-to-text/docs/speech-to-text-supported-languages
+         */
         language?: string;
+        /**
+         * PulseAudio speaker device name (default: 'virtual_speaker').
+         */
         speakerDevice?: string;
+        /**
+         * PulseAudio microphone device name (default: 'virtual_microphone').
+         */
         microphoneDevice?: string;
     }
 ): Promise<string> {
