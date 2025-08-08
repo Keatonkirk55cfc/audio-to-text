@@ -1,1 +1,1 @@
-export { transcribeFromFile } from './core/transcriber.ts';
+export { transcribeFromFile } from './core/transcriber';
