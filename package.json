@@ -22,7 +22,7 @@
   "types": "dist/index.d.ts",
   "module": "dist/index.js",
   "scripts": {
-    "build": "bun build src/index.ts --outdir dist",
+    "build": "bun build src/index.ts --outdir dist --target node",
     "start": "node dist/index.js"
   },
   "files": [
