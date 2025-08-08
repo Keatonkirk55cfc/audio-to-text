@@ -1,6 +1,6 @@
 # 🎧 audio-to-text
 
-A robust backend package for transcribing audio files to text using the [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API).
+A free and robust backend package for transcribing audio files to text using the [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API).
 
 ---
 
@@ -21,12 +21,13 @@ A robust backend package for transcribing audio files to text using the [Web Spe
 Before installing and using this package, please ensure the following dependencies are installed and properly configured on your system:
 
 - [**ffmpeg**](https://ffmpeg.org/) — for audio format conversion and processing
+- [**ffprobe**](https://ffmpeg.org/) — for audio validation (comes with ffmpeg)
 - [**pactl**](https://freedesktop.org/software/pulseaudio/pulseaudio-docs/html/pactl.html) — PulseAudio control tool for audio routing
 - [**paplay**](https://freedesktop.org/software/pulseaudio/pulseaudio-docs/html/paplay.html) — PulseAudio playback utility
 - [**pulseaudio**](https://www.freedesktop.org/wiki/Software/PulseAudio/) — PulseAudio audio server
 - [**Node.js**](https://nodejs.org/) — version 18 or higher is recommended
 - [**bun**](https://bun.sh/) — optional, recommended for development and build tasks
-
+- **Internet connection** (required for browser-based speech recognition)
 
 ## Install on Ubuntu/Debian:
 
@@ -146,10 +147,11 @@ Specify the language code (e.g., `en-US`, `fa-IR`, `fr-FR`, etc.) in the `langua
 
 ## 🛠️ Troubleshooting
 
-- Ensure all prerequisites are installed and available in your PATH (`which ffmpeg`, `which pactl`, `which paplay`)
+- Ensure all prerequisites are installed and available in your PATH (`which ffmpeg`, `which ffprobe`, `which pactl`, `which paplay`)
 - For long audio files, ensure enough disk space in `/tmp`
 - If you get permission errors, run with appropriate user rights
 - For best results, use high-quality audio files (16kHz mono recommended)
+- Make sure your connection is stable and not interrupted during transcription
 - Only Linux with PulseAudio is supported
 
 ---
