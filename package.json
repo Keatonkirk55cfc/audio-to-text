@@ -1,5 +1,5 @@
 {
-  "name": "audio-to-text",
+  "name": "audio-to-text-node",
   "type": "module",
   "version": "0.1.0",
   "description": "Backend audio file to text transcription using Web Speech API with Puppeteer",
