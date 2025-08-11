@@ -1,6 +1,6 @@
 import { execSync } from 'child_process';
-import path from 'path';
-import fs, { existsSync } from 'fs';
+import * as path from 'path';
+import * as fs from 'fs';
 import chalk from 'chalk';
 
 /**
@@ -27,7 +27,7 @@ function isAudioFile(filePath: string): boolean {
  * @returns The directory for the audio file
  */
 function prepareAudio(filePath: string): string {
-    if (!existsSync(filePath)) {
+    if (!fs.existsSync(filePath)) {
         throw new Error(chalk.red(`Audio file not found: ${filePath}`));
     }
 

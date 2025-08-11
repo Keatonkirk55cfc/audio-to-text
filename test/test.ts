@@ -1,5 +1,5 @@
 import { transcribeFromFile } from '../src';
-import path from 'path';
+import * as path from 'path';
 import chalk from 'chalk';
 
 async function runTest() {
