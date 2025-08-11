@@ -32,7 +32,10 @@ function getModuleIdByName(name: string): number | null {
     if (audioRoutingConfig.modulesList) {
         const line = audioRoutingConfig.modulesList.split('\n').find(line => line.includes(name));
         if (line) {
-            return parseInt(line.split('\t')[0]);
+            const parts = line.split('\t');
+            if (parts.length > 0 && parts[0]) {
+                return parseInt(parts[0]);
+            }
         }
     }
 
